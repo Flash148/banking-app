@@ -19,6 +19,10 @@ public class Employee {
         this.username = username;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
 
     public int getEmployeeId() {
         return employeeId;
@@ -59,6 +63,8 @@ public class Employee {
         this.passwordHash = passwordHash;
     }
 
-    
+    public void setUsername(String username) {
+        this.username = username;
+    }
     
 }
