@@ -1,38 +1,52 @@
-// package com.bank.transaction;
+package com.bank.transaction;
+import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
-// import java.util.Arrays;
 
-// //This high-level class is meant to encapsulate
-// //the different causes for the various exceptions made
-// public class Transaction {
-//     //Uses InvalidTransactionException
-//     //InvalidTransactionTypeException
-//     //TransitionOnClosedAccountException
-//     //InvalidPermissionException
+public class Transaction {
+    private int transactionId;
+    private TransactionType transactionType;
+    private BigDecimal amount;
+    private LocalDateTime createdAt;
+    private Integer intiatedByEmployeeId;
+    private int accountNum;
+    private BigDecimal resultingBalance;
 
-//     public void validTransaction(String transaction) throws InvalidTransactionException{
-//         //transaction.toUpperCase() will be done in the methods with the logic in place
-//         String[] transaction_type = new String[]{"DEPOSIT", "WITHDRAWAL", "TRANSFER_IN", "TRANSFER_OUT", "WIRE_IN", "WIRE_OUT"};
-//         if(!Arrays.asList(transaction_type).contains(transaction)){
-//             throw new InvalidTransactionTypeException("Invalid Transaction Type Detected.");
-//         }
-//     }
+    public Transaction(int transactionId, TransactionType transactionType, BigDecimal amount, LocalDateTime createdAt, Integer intiatedByEmployeeId, int accountNum, BigDecimal resultingBalance) {
+        this.transactionId = transactionId;
+        this.transactionType = transactionType;
+        this.amount = amount;
+        this.createdAt = createdAt;
+        this.intiatedByEmployeeId = intiatedByEmployeeId;
+        this.accountNum = accountNum;
+        this.resultingBalance = resultingBalance;
+    }
 
-//     public void closedAccountTransaction(String transaction, String status) throws InvalidTransactionException{
-//         if(!status.equals("ACTIVE")){
-//             throw new TransactionOnClosedException("Accessed Account is currently unavailable.");
-//         }
-//     }
+    public int getTransactionId() {
+        return transactionId;
+    }
 
-//     //transaction in this case are wire transfer assistance
-//     //as customers cannot help each other with wire transfers
-//     //Checks if the user is in the Employee table or the Customer table
-//     public void userPermissions(String transaction, String username, String password) throws InvalidTransactionException{
-//         /*
-//             data_obj = Object that references the database
-//             if(!data_obj.employees.contains(username, password)){
-//                 throw new InvalidPermissionException("You are not authorized to access these settings.")
-//             }
-//         */
-//     }
-// }
+    public TransactionType getTransactionType() {
+        return transactionType;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+    public Integer getIntiatedByEmployeeId() {
+        return intiatedByEmployeeId;
+    }
+
+    public int getAccountNum() {
+        return accountNum;
+    }
+
+    public BigDecimal getResultingBalance() {
+        return resultingBalance;
+    }
+
+}
