@@ -10,7 +10,7 @@ import static org.mockito.Mockito.when;
 class AppTest {
     @Test 
     void junitWorks() {
-        assertEquals(2, 1 + 1);
+        assertEquals(2, 1 + 1, "1 + 1 should equal 2");
     }
 
     @Test 
