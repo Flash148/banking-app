@@ -20,6 +20,13 @@ public class Customer {
         this.createdAt = createdAt;
     }
 
+    public Customer(String firstName, String lastName, String passwordHash, String username) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passwordHash = passwordHash;
+        this.username = username;
+    }
+
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
