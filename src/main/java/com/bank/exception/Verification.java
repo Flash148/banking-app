@@ -4,15 +4,14 @@ package com.bank.exception;
 //the different causes for the various exceptions made
 public class Verification {
     //Uses ValidationException
-    //IncorrectUsernameException
-    //IncorrectPasswordException
+
     public void checkUserLogin(String username, String password) throws ValidationException{
         /*
             if(username is not in SQL_DATABASE){
-                throw new IncorrectUsernameException("Username not Found.")
+                throw new InvalidCredentialException("Username not Found.")
             }
             if(password is not in SQL_DATABASE){
-                throw new IncorrectPasswordException("Password not Found.")
+                throw new InvalidCredentialExcepition("Password not Found.")
             }
          */
     }
