@@ -1,9 +1,0 @@
-package com.bank.account;
-
-public enum AccountStatus {
-    ACTIVE, 
-    FROZEN,
-    CLOSED
-}
-
-
