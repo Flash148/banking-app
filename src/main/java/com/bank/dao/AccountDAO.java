@@ -17,9 +17,9 @@ public interface AccountDAO {
     List<Account> findByCustomerId(int customerId);
 
     //Change account's status
-    void changeStatus(int accountId, AccountStatus status);
+    void changeStatus(int accountNum, AccountStatus status);
 
     //Change an account's balance
-    void changeBalance(int accountId, BigDecimal balance);
+    void changeBalance(int accountNum, BigDecimal balance);
     
 }
