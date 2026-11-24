@@ -1,7 +1,9 @@
 package com.bank.dao;
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.bank.model.Account;
+import com.bank.model.AccountStatus;
 
 public interface AccountDAO {
 
@@ -9,15 +11,15 @@ public interface AccountDAO {
     Account create(Account account);
 
     //Find one account by its number
-    Account findBYId(int accountId);
+    Account findById(int accountNum);
 
     //Find all accounts for a specific customer
     List<Account> findByCustomerId(int customerId);
 
     //Change account's status
-    Account changeStatus(int accountId, String status);
+    void changeStatus(int accountId, AccountStatus status);
 
     //Change an account's balance
-    Account changeBalance(int accountId, double balance);
+    void changeBalance(int accountId, BigDecimal balance);
     
 }

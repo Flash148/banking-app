@@ -1,6 +1,6 @@
-package com.bank.transaction;
-import java.time.LocalDateTime;
+package com.bank.model;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 
 public class Transaction {
@@ -8,16 +8,16 @@ public class Transaction {
     private TransactionType transactionType;
     private BigDecimal amount;
     private LocalDateTime createdAt;
-    private Integer intiatedByEmployeeId;
+    private Integer initiatedByEmployeeId;
     private int accountNum;
     private BigDecimal resultingBalance;
 
-    public Transaction(int transactionId, TransactionType transactionType, BigDecimal amount, LocalDateTime createdAt, Integer intiatedByEmployeeId, int accountNum, BigDecimal resultingBalance) {
+    public Transaction(int transactionId, TransactionType transactionType, BigDecimal amount, LocalDateTime createdAt, Integer initiatedByEmployeeId, int accountNum, BigDecimal resultingBalance) {
         this.transactionId = transactionId;
         this.transactionType = transactionType;
         this.amount = amount;
         this.createdAt = createdAt;
-        this.intiatedByEmployeeId = intiatedByEmployeeId;
+        this.initiatedByEmployeeId = initiatedByEmployeeId;
         this.accountNum = accountNum;
         this.resultingBalance = resultingBalance;
     }
@@ -37,8 +37,8 @@ public class Transaction {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
-    public Integer getIntiatedByEmployeeId() {
-        return intiatedByEmployeeId;
+    public Integer getInitiatedByEmployeeId() {
+        return initiatedByEmployeeId;
     }
 
     public int getAccountNum() {

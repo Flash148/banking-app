@@ -1,4 +1,4 @@
-package com.bank.employee;
+package com.bank.model;
 import java.time.LocalDateTime;
 
 
