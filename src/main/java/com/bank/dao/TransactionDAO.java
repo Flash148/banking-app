@@ -3,6 +3,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import com.bank.model.Transaction;
+import com.bank.model.TransactionType;
 
 
 public interface TransactionDAO {
@@ -11,7 +12,7 @@ public interface TransactionDAO {
 
     List<Transaction> findByAccountNum(int accountNum);
 
-    List<Transaction> findByAccountNumAndType(int accountNum, String type);
+    List<Transaction> findByAccountNumAndType(int accountNum, TransactionType type);
 
     void transfer(int fromAccountNum, int toAccountNum, BigDecimal amount, Integer initiatedByEmployeeId);
     
