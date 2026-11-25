@@ -1,0 +1,3 @@
+CONNECTION_URL=jdbc:postgresql://localhost:5432/bankdb
+CONNECTION_USERNAME=postgres
+CONNECTION_PASSWORD=CHANGE_ME
