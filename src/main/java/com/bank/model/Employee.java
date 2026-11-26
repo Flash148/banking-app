@@ -19,6 +19,10 @@ public class Employee {
         this.username = username;
     }
 
+    public Employee() {
+        
+    }
+
     public String getUsername() {
         return username;
     }
